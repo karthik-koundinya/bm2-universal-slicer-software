@@ -127,15 +127,8 @@ class URDFLoaderWidget(ScriptedLoadableModuleWidget):
                 controller = GalilController()
                 controllerBlock["controllerLogic"] = controller
                 controllerUIContainer.setVisible(True)
-            if controllerName == "Arduino":
-                controller = GalilController()
-                controllerBlock["controllerLogic"] = controller
-                controllerUIContainer.setVisible(True)
-            if controllerName == "PMD-401":
-                controller = GalilController()
-                controllerBlock["controllerLogic"] = controller
-                controllerUIContainer.setVisible(True)
-
+            # Add controllers here (Arduino, PMD401 and more)
+        
         def onDelete():
             self.controllerBlocksLayout.removeWidget(blockWidget)
             self.controllerBlocks.remove(controllerBlock)
